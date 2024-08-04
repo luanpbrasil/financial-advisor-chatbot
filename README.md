@@ -6,6 +6,12 @@ The interface is designed to provide an interactive, chat-like experience for us
 
 <img src="https://github.com/user-attachments/assets/469934e4-420a-4782-bbb2-01236b22cddd" alt="Image description" width="600"/>
 
+## System Architecture
+
+This project is a simple and limited implementation of the following architecture:
+
+<img src="https://github.com/user-attachments/assets/05600a74-1d0d-4868-ab0f-6b3d7817c084" alt="Image description" width="900"/>
+
 ## Features
 
 - Chat-like interface
