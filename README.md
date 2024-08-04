@@ -1,8 +1,16 @@
-# financial-advisor-chatbot
+# :robot: financial-advisor-chatbot
 
 This project implements a POC for a financial advisor chatbot using LangChain, OpenAI, and Streamlit. 
 The chatbot allows financial advisors to query client portfolio data and target allocations in natural language and get accurate, verifiable answers. 
 The interface is designed to provide an interactive, chat-like experience for users.
+
+<img src="https://github.com/user-attachments/assets/469934e4-420a-4782-bbb2-01236b22cddd" alt="Image description" width="600"/>
+
+## System Architecture
+
+This project is a simple and limited implementation of the following architecture:
+
+<img src="https://github.com/user-attachments/assets/05600a74-1d0d-4868-ab0f-6b3d7817c084" alt="Image description" width="900"/>
 
 ## Features
 
