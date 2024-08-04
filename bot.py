@@ -29,7 +29,7 @@ class FinancialChatbot:
         # Prepare context
         context = {
             "portfolio_data": self.df_financial.to_string(),
-            "target_allocations": self.df_financial.to_string(),
+            "target_allocations": self.df_alloc.to_string(),
             "question": question
         }
 
