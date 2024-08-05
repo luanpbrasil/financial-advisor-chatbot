@@ -8,7 +8,7 @@ The interface is designed to provide an interactive, chat-like experience for us
 
 ## System Architecture
 
-This project is a simple and limited implementation of the following architecture:
+This project is a simple implementation of the following architecture:
 
 <img src="https://github.com/user-attachments/assets/05600a74-1d0d-4868-ab0f-6b3d7817c084" alt="Image description" width="800"/>
 
