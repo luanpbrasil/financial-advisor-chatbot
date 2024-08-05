@@ -68,12 +68,13 @@ streamlit run app.py
 ## Example questions
 
 - "What is the portfolio for Client 1?"
+- "How much does Client 1 allocate to ETFs"
+- "What is the target allocation by sector for Client 1?"
 - "What is the current market value of Amazon.com Inc. for Client 1?"
 - "What are the target allocations for Client 2?"
 - "Can you provide the sector distribution for Client 1's portfolio?"
 - "What is the risk level of Client 1's holdings?"
 - "What is the total dividend yield for Client 1's portfolio?"
-- "How much does Client 1 allocate to ETFs compared to bonds?"
 - "What are the analyst ratings for the stocks in Client 2's portfolio?"
 - "What is the 52-week high and low for Alphabet Inc. in Client 1's portfolio?"
 - "When was Tesla Inc. purchased by Client 1?"
