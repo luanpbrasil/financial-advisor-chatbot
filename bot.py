@@ -1,17 +1,26 @@
 from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain_community.callbacks import get_openai_callback
+from deepeval.test_case import LLMTestCase
+from deepeval.metrics import AnswerRelevancyMetric
 
 
 class FinancialChatbot:
     def __init__(
-        self, df_alloc, df_financial, api_key, model_name="gpt-4o-mini"
+        self,
+        df_alloc,
+        df_financial,
+        api_key,
+        model_name="gpt-4o-mini",
+        evaluation_threshold=0.7,
     ) -> None:
         self.df_alloc = df_alloc
         self.df_financial = df_financial
         self.llm = self._get_llm(model_name, api_key)
+        self.model_name = model_name
         self.prompt_template = self._get_prompt()
         self.llm_chain = self._get_llm_chain()
+        self.evaluation_threshold = evaluation_threshold
 
     def _get_prompt(self):
         return PromptTemplate.from_template(
@@ -50,3 +59,15 @@ class FinancialChatbot:
             total_cost = cb.total_cost
 
         return response.content, total_tokens, total_cost
+
+    def evaluate_response_by_relevancy(self, question, answer):
+        metric = AnswerRelevancyMetric(
+            threshold=self.evaluation_threshold,
+            model=self.model_name,
+            include_reason=True,
+        )
+
+        test_case = LLMTestCase(input=question, actual_output=answer)
+
+        metric.measure(test_case)
+        return metric.score, metric.reason
