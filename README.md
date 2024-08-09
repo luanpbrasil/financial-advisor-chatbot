@@ -18,6 +18,7 @@ This project is a simple implementation of the following architecture:
 - Query client portfolio details
 - Retrieve target allocations for clients
 - Get specific information about individual holdings (e.g., market value, sector distribution)
+- Relevance evaluation metrics
 
 ## Data
 
